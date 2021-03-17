@@ -4,7 +4,7 @@ import '../../App.css'
 import './Home.css'
 function Home() {
     return (
-          <div className='container'>
+          <div className='cont'>
             <video src="/videos/car.mp4" autoPlay loop muted />
             <h1>BOOK A CAR WITH JUST ONE CLICK</h1>
             <p>BOOK NOW</p>
