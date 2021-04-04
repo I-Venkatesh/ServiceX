@@ -1,8 +1,11 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
     "google-maps-react": "^2.0.6",
     "mapbox-gl": "^2.1.1",
+    "razorpay": "^2.0.6",
     "react-scripts": "^4.0.3",
+    "shortid": "^2.2.16",
     "worker-loader": "^3.0.8"
   }
 }
