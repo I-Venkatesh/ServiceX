@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../../App.css'
 import "./Services.css"
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,6 +9,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import SignUp from "./SignUp"
+import { BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+
 
 const useStyles = makeStyles({
     root: {
@@ -18,10 +24,18 @@ const useStyles = makeStyles({
       height: 450,
     },
   });
-  
+
+
 
 function Services() {
     const classes = useStyles();
+    const history = useHistory();
+    const navigateSignUp = () => {
+        history.push("/sign-up");
+    }
+    const navigateSignIn = () => {
+        history.push("/sign-in");
+    }
     return (
         
         <div class="serviceCard">
@@ -42,10 +56,10 @@ function Services() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                <Button size="large" color="secondary">
+                <Button size="large" color="secondary" onClick={navigateSignIn}>
                         Sign in
                     </Button>
-                    <Button size="large" color="secondary">
+                    <Button size="large" color="secondary" onClick={navigateSignUp}>
                         Sign up
                     </Button>
                 </CardActions>

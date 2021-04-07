@@ -11,8 +11,8 @@ function Home() {
             <div className='hero-btns'>
               <Button variant="outlined" color="secondary">GET STARTED</Button>
             </div>
-            
         </div>
+          
     )
 }
 

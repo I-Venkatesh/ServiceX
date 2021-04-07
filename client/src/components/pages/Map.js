@@ -1,4 +1,5 @@
 
+import mapboxgl from 'mapbox-gl';
 import React, { useState } from 'react'
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import LocDetails from './LocDetails';
@@ -13,8 +14,9 @@ function Map() {
   })
   const [popupInfo, setPopupInfo] = useState(null);
   return (
+    <>
     <div className="map">
-      <ReactMapGL
+        <ReactMapGL
         mapboxApiAccessToken={"pk.eyJ1Ijoia2FrYXNoaTI1MTAiLCJhIjoiY2ttb2xld2NxMGkzdzJwbGhpcXNkMmptMiJ9.--t9iJ_IT1Vz6XLBnNcVhA"}
         {...viewport} onViewportChange={(newView) => setViewport(newView)}>
         <Marker latitude={25.3176} longitude={82.9739} offsetLeft={-20} offsetTop={-10}>
@@ -43,25 +45,26 @@ function Map() {
             <img src="/images/car.png" width={50} height={50} />
           </div>
         </Marker>
-
+        
         <Marker latitude={21.1702} longitude={72.8311} offsetLeft={-20} offsetTop={-10}>
           <img src="/images/car.png" width={50} height={50} />
         </Marker>
         {popupInfo && (
           <Popup
-            tipSize={5}
+            tipSize={3}
             anchor="bottom"
             longitude={popupInfo.longitude}
             latitude={popupInfo.latitude}
             closeOnClick={false}
             onClose={() => setPopupInfo(null)}
-          >
-            <LocDetails/>
+            >
+            <LocDetails type="Car Booking" img="/images/car1.jpg" name="Rishabh" price="200$"/>
           </Popup>
         )}
 
       </ReactMapGL>
     </div>
+    </>
   )
 }
 

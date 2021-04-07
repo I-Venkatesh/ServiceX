@@ -15,7 +15,7 @@ async function loadScript(src){
     
     
 }
-function LocDetails() {
+function LocDetails(props) {
     async function displayRazorpay()
     { 
         const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
@@ -33,13 +33,11 @@ function LocDetails() {
             currency: data.currency,
             amount: data.amount.toString(),
             order_id: data.id,
-            name: "Booking car",
+            name: props.type,
             description: "Test Transaction",
             image: "https://example.com/your_logo",
             handler: function (response){
-                alert(response.razorpay_payment_id);
-                alert(response.razorpay_order_id);
-                alert(response.razorpay_signature)
+                alert('Payment Successful')
             },
             prefill: {
                 "name": "I Venkatesh",
@@ -54,9 +52,9 @@ function LocDetails() {
 
     return (
         <div>
-            <img src="/images/car1.jpg"/>
-            <h3>Driver Name: Rishabh</h3>
-            <h3>Price: 3000$</h3>
+            <img src={props.img} style={{width: "200px"}}/>
+            <h3>Driver Name:{props.name}</h3>
+            <h3>Price: {props.price}</h3>
             <button onClick={displayRazorpay}>Book</button>
         </div>
     )
