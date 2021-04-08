@@ -61,7 +61,7 @@ mongoose.connect(process.env.MDB_CONNECT,
     },
     (err) => {
         if (err) return console.error(err);
-        console.log("Connected to MongoDB")
+        console.log("Hello connected to MongoDB")
     })
 
 app.use("/auth", require("./routers/userRouter"))
