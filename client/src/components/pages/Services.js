@@ -84,10 +84,10 @@ function Services() {
                     </CardContent>
                 </CardActionArea>
                 <CardActions>
-                    <Button size="large" color="secondary">
+                    <Button size="large" color="secondary" onClick={navigateSignIn}>
                         Sign in
                     </Button>
-                    <Button size="large" color="secondary">
+                    <Button size="large" color="secondary" onClick={navigateSignUp}>
                         Sign up
                     </Button>
                 </CardActions>

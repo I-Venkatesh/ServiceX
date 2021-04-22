@@ -11,6 +11,13 @@ const cookieParser = require("cookie-parser")
 
 dotenv.config()
 
+// For Api endpoints
+app.use(express.json());
+const endPoints = require('./routers/Endpoints');
+app.use('/api', endPoints)
+
+
+
 app.use(cors({
     origin : ["http://localhost:3000"],
     credentials: true,
@@ -66,3 +73,4 @@ mongoose.connect(process.env.MDB_CONNECT,
 
 app.use("/auth", require("./routers/userRouter"))
 app.use("/customer",require('./routers/customerRouter'))
+

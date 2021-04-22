@@ -4,6 +4,7 @@ import React, {useContext, useState} from 'react'
 import {Link} from 'react-router-dom'
 import AuthContext from '../context/AuthContext'
 import './Navbar.css'
+
 function Navbar() {
     const [click,setClick] = useState(false)
     const handleClick = () => setClick(!click)
@@ -38,11 +39,13 @@ function Navbar() {
                         </Link>
                         </li>
                         }
-                        {/* <li className='navs-items'>
+                        { loggedIn===false&&
+                        <li className='navs-items'>
                            <Link to='/dashboard' className='navs-links' onClick={closeMobileMenu}>
                                 Dashboad
                             </Link>
-                        </li> */}
+                        </li>
+                        }   
                         { loggedIn===true&&
                         <li className='navs-items'>
                             <Link to='/map' className='navs-links' onClick={closeMobileMenu}>
@@ -60,10 +63,10 @@ function Navbar() {
                             }
                             {loggedIn&&
                             <li className='navs-items'>
-                            <Link to='/' className='navs-links' onClick={logOut}>
-                                    Sign out
-                            </Link>
-                        </li>
+                                <Link to='/' className='navs-links' onClick={logOut}>
+                                        Sign out
+                                </Link>
+                            </li>
                         }
 
                     </ul>

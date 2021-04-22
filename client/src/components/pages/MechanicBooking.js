@@ -21,7 +21,7 @@ function MechanicBooking() {
           <img src="/images/mech.png" width={50} height={50} />
         </Marker>
 
-        <Marker latitude={13.0827} longitude={80.2707} offsetLeft={-20} offsetTop={-10}>
+        <Marker latitude={19.0760} longitude={72.8777} offsetLeft={-20} offsetTop={-10}>
           {/* <img src="/images/car.png" width={50} height={50} /> */}
 
           <div
@@ -44,7 +44,7 @@ function MechanicBooking() {
           </div>
         </Marker>
 
-        <Marker latitude={21.1702} longitude={72.8311} offsetLeft={-20} offsetTop={-10}>
+        <Marker latitude={28.7041} longitude={77.1025} offsetLeft={-20} offsetTop={-10}>
           <img src="/images/mech.png" width={50} height={50} />
         </Marker>
         {popupInfo && (

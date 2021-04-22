@@ -1,9 +1,10 @@
 import React from 'react'
 import '../../App.css'
+import Dash from '../dashboard/Dash'
 function Dashboard() {
     return (
         <div>
-            <h1>Dashboard Page</h1>
+            <Dash />
         </div>
     )
 }
