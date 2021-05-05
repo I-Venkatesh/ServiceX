@@ -15,3 +15,17 @@ An enterprise application development project built using MERN stack. Main purpo
 
 ### Home page
 ![](screenshots/homePage.png)
+### Services page
+![](screenshots/ServicesPage.png)
+### Authentication pages
+![](screenshots/SignUpPage.png)
+![](screenshots/signInPage.png)
+### Car booking page
+![](screenshots/carBookingPage.png)
+### Mechanic booking page
+![](screenshots/mechanicBookingPage.png)
+# Payment page
+![](screenshots/paymentPage.png)
+![](screenshots/successfulPaymentPage.png)
+
+
