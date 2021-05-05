@@ -3,7 +3,7 @@ import { Component, useState, setState } from 'react'
 import { Button } from '@material-ui/core';
 import ProductCard from '../Productcards/ProductCard'
 import velar from '../Images/Velar.jpg'
-
+import "./Cars.css"
 class Cars extends Component{
     
 
