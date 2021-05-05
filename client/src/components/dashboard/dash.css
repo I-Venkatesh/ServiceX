@@ -74,3 +74,28 @@ body {
         "main";
     }
 }
+
+.conta1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 200px;
+    margin-top: 30px;
+}
+
+.bt1 {
+    background: #d1ecf1;
+    color: #35a4ba;
+    text-align: center;
+    padding: 30px;
+    border-radius:5px;
+    font-size: 15px;
+}
+
+.bt2 {
+    background: #d1ecf1;
+    color: #35a4ba;
+    text-align: center;
+    padding: 30px;
+    border-radius:5px;
+    font-size: 15px;
+}

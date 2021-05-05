@@ -1,23 +1,23 @@
 import "../main/main.css"
 import React from 'react'
 import Chart from "../Charts/Charts.js"
+import { Button } from '@material-ui/core';
 
 const Main = () => {
     return (
         <main>
             <div className="main__container">
                 <div classname="main__title">
-                    {/* <img src={} alt="hello"></img> */}
                     <div className="main__greeting">
                         <h1>Hello Rt134</h1>
                     </div>
                 </div>
                 <div className="main__cards">
                     <div className="card101">
-                    <i class="fa fa-smile-o fa-2x" aria-hidden="true"></i>
+                    <i class="fa fa-smile fa-2x" aria-hidden="true"></i>
                         <div className="card_inner">
-                            
-                            <p className="text-primary-p">Number of Happy Customers</p>
+                    
+                            <p className="text-primary-p">Happy Customers</p>
                             <span className="font-bold text-title">878796</span>
                         </div>
                     </div>
@@ -26,7 +26,8 @@ const Main = () => {
                     <div className="card101">
                         <i class="fa fa-car fa-2x" aria-hidden="true"></i>
                         <div className="card_inner">
-                            <p className="text-primary-p">Security Deposit for Cars</p>
+                        <Button href="/car/post" variant="contained" color="primary">Register your Car</Button>
+                            <p className="text-primary-p">Security Deposit Cars</p>
                             <span className="font-bold text-title">$200</span>
                         </div>
                     </div>
@@ -34,7 +35,8 @@ const Main = () => {
                     <div className="card101">
                         <i className="fa fa-wrench fa-2x text-yellow"></i>
                         <div className="card_inner">
-                            <p className="text-primary-p">Base price for Mechanics</p>
+                        <Button href="/mechanic/post" className="bt1" variant="contained" color="primary">Register as Mechanic</Button>
+                            <p className="text-primary-p">Mechanics base Price</p>
                             <span className="font-bold text-title">$50</span>
                         </div>
                     </div>
